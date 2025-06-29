@@ -4,10 +4,10 @@ import styles from "./App.module.css"
 function App() {
 
   return (
-    <div>
+    <div className={styles.body}>
 
         <Header/>
-        <div className={styles.body}></div>
+        
 
     </div>
   )

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+}
+
+.card {
+    background-color: red;
+    width: 260px;
+    position: relative;
+}
+.popular{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #F6C768;
+    border-radius: 60px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.image{
+    border-radius: 15px;
+}

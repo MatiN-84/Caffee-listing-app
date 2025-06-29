@@ -3,7 +3,7 @@
 
     background-color: #1B1D1F;
     border-radius: 10px;
-    height: 400px;
+    min-height: 400px;
     position: absolute;
     top: 100px;
     left: 200px;
