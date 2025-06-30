@@ -6,9 +6,10 @@
 }
 
 .card {
-    background-color: red;
     width: 260px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .popular{
     position: absolute;
@@ -22,4 +23,49 @@
 }
 .image{
     border-radius: 15px;
+}
+.priceAndName{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+
+}
+.priceAndName :first-child {
+    color: white;
+}
+.priceAndName :nth-child(2){
+    background-color: #BEE3CC;
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+.rateBox{
+    display: flex;
+    position: relative;
+    width: 150px;
+
+}
+.rating {
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    color: white;
+    font-size: 16px;
+}
+.votes{
+    color: #6F757C;
+    font-size: 14px;
+}
+.soldOut{
+    font-size:15px;
+    color:#FF6B6B;
 }

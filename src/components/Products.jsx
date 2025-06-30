@@ -21,24 +21,40 @@ function Products() {
         <div key={product.id} className={styles.card}>
           <div>
             {product.popular && <div className={styles.popular}>Popular</div>}
-            <img className={styles.image} src={product.image} alt={product.title} />
+            <img
+              className={styles.image}
+              src={product.image}
+              alt={product.title}
+            />
           </div>
-          <div>
-            <div >{product.name}</div> <span>{product.price}</span>
+          <div className={styles.priceAndName}>
+            <div>{product.name}</div> <div>{product.price}</div>
           </div>
+
           <div>
-            
             {product.rating ? (
-              <div>
-                
-                <img src="resources/Star_fill.svg" alt="star" />{" "}
-                <p>{product.rating}</p>
+              <div className={styles.footer}>
+                <div className={styles.rateBox}>
+                  <img src="resources/Star_fill.svg" alt="star" />{" "}
+                  <div className={styles.rating}>
+                    <span className={styles.rate}>{product.rating} </span>
+                    <span className={styles.votes}>
+                      ({product.votes} votes){" "}
+                    </span>
+                  </div>
+                </div>
+                {!product.available && <div className={styles.soldOut}>Sold out</div>}
               </div>
-            ) : (          
-              <>
-                <img src="resources/Star.svg" alt="star" />
-                <p>no rating</p>
-              </>
+            ) : (
+              <div className={styles.footer}>
+                <div className={styles.rateBox}>
+                  <img src="resources/Star.svg" alt="star" />
+                  <div className={styles.rating}>
+                    <span className={styles.votes}>No rating</span>
+                  </div>
+                </div>
+                {!product.available && <div className={styles.soldOut}>Sold out</div>}
+              </div>
             )}
             {product.vote}
           </div>
