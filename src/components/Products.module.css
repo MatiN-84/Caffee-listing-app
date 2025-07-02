@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    width: 900px;
     
 }
 
@@ -10,6 +11,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .popular{
     position: absolute;
@@ -28,6 +30,7 @@
     display: flex;
     justify-content: space-between;
     padding:5px;
+    margin-top: 10px;
 
 }
 .priceAndName :first-child {
@@ -46,17 +49,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 10px;
+
 }
 .rateBox{
     display: flex;
     position: relative;
     width: 150px;
+    margin-left: 4px;
 
 }
 .rating {
     position: absolute;
-    top: -8px;
+    top: 1px;
     left: 30px;
     color: white;
     font-size: 16px;
