@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "./products.module.css";
-function Products() {
+function Products({show}) {
   const [productsData, setProductsData] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json"
     )
       .then((response) => response.json())
       .then((data) => {
+        setAllProducts(data);
         setProductsData(data);
         console.log(data);
       })
@@ -15,6 +17,17 @@ function Products() {
         console.log(error);
       });
   }, []);
+
+  useEffect(() => {
+    if (show === "AVAILABLE") {
+      setProductsData((prevData) =>
+        prevData.filter((product) => product.available)
+      );
+    }else {
+      setProductsData(allProducts);
+    }
+  }, [show]);
+
   return (
     <div className={styles.container}>
       {productsData.map((product) => (

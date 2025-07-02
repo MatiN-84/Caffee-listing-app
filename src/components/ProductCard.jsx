@@ -31,7 +31,7 @@ function ProductsCard() {
 
         
       </div>
-      <Products/>
+      <Products show={show} />
     </div>
   );
 }
