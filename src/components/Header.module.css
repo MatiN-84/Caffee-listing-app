@@ -1,4 +1,23 @@
 .header {
     background-image: url("/public/resources/bg-cafe-lg.jpg");
     height: 350px;
+    align-items: center;
+    padding-top: 150px;
+
+}
+.header1024 {
+    background-image: url("/public/resources/bg-cafe.jpg");
+    height: 250px;
+    margin: auto;
+    
+    padding-top: 150px;
+
+}
+.header640{
+    
+    background-image: url("/public/resources/bg-cafe-sm.jpg");
+    height: 200px;
+    align-items: center;
+    padding-top: 150px;
+
 }

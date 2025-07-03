@@ -32,7 +32,7 @@ function Products({show}) {
     <div className={styles.container}>
       {productsData.map((product) => (
         <div key={product.id} className={styles.card}>
-          <div>
+          <div className={styles.imageBox}>
             {product.popular && <div className={styles.popular}>Popular</div>}
             <img
               className={styles.image}
